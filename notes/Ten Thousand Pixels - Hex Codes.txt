@@ -1,0 +1,5 @@
+Red - #E01B1B
+Green - #39C141
+Blue - #09162A
+White BG - #E8E8E8
+Black BG - #0C0C0C
