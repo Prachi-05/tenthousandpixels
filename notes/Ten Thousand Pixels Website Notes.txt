@@ -1,0 +1,36 @@
+Top Nav Bar 
+	Box sixe - 1920px x 178 px
+	Gradient Hex - #0C0C0C to transparent #0C0C0C
+	Gradient - change to solid #0C0C0C white when scrolled down, reference netflix jobs website.
+	Font - Change to Primteime
+
+Main Banner 
+	"watch Now" is a clickable link, which leads to the documentary.
+	When hovering - "Watch now" has an underline animation, or if custom animation possible, please let me know because i have the spray paint animation.
+
+Description Text
+	No changes
+
+White line
+	to be rounded stroke, stroke size - 3 px
+
+Accolades
+	attached grouped png image
+
+White line 2
+
+Carousel
+	Please resize to the size in the design
+	If possible, only if possible, scale down to the size that is in the design from full page size as the page is scorlled down.
+	rounded corners - 10 
+	remove documentary from carousel
+	remove blue border if possible
+
+Crew Section
+	only changes in the line animations, will work on this in the end together.
+
+Links Section
+	Links to have major animation.	
+	As hovered - name of each social media slides down from behind the logo
+	As hovered - Color of logo changes to that of each logo - reference , Soundcloud profile links
+

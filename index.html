@@ -8,7 +8,6 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="script.js"></script>
         <title>ten thousand pixels</title>
 
@@ -38,16 +37,34 @@
           </div>
         </div>
       </nav>
-
-      <div class="bgimg-1 container-fluid" style="margin-top:30px">
-      </div>
-
-
+      
+      <div class="bgimg-1 container-fluid"> 
+        
+        <div class="bluebg">
+          <img src="images/Free_Flying_Title.png" alt="Free Flying" class="free-flying">
+          <div class="watch-now-container">
+            <div class="watch-now">
+              
+                <img src="images/watch_now.png">
+            </div>
+            <div class="spray-animation">      
+              <a href="https://www.youtube.com/watch?v=COom3B4S81A" target="_blank">      
+              <img class="spray"></a>
+            </div>
+          </div>
+          
+        </div> 
+      </div>       
+      
       <div id="about">
           <p>Skating away on their boards translates to an epitome of freedom to the young Fly Squad community in Kochi, Kerala.</p>
           <p>Theirs is not just a story of chasing dreams but also learning to get back up no matter how many times they skid and fall.</p>
           <p><i>Free Flying</i> documents their journey, their milestones as well as the smiles and pains <br /> along their journey - a little peek into the revolution on a skateboard.</p>
           <hr>
+      </div>
+      <div class="accolades container">
+        <img src="images/accolades.png" alt="accolades">
+        <hr>
       </div>
 
 
@@ -82,11 +99,10 @@
       </div>
       </div>
       </div>
-      </div>
-
+    </div>
 
       <div id="crew">
-          <h3>A FILM BY</h3>
+          <h1>A FILM BY</h1>
 
           <div class="row">
             <div class="column" onclick="openInsta('documenthari')">
@@ -95,7 +111,7 @@
                 <div class="overlay">
                   <div class="handle"> @documenthari</div>
                 </div>
-                <img src = "images/people/hari.jpg">
+                <img src = "images/people/hari_image.jpg">
                 <div class="text">
                   DIRECTION <br />
                   EDITING<br />
@@ -112,7 +128,7 @@
                 <div class="overlay">
                   <div class="handle"> @jovenroy</div>
                 </div>
-                <img src = "images/people/jeev.jpg">
+                <img src = "images/people/joven_image.jpg">
                 <div class="text">
                   DIRECTION <br />
                   CINEMATOGRAPHY
@@ -127,7 +143,7 @@
                 <div class="overlay">
                   <div class="handle"> @jacobrejii</div>
                 </div>
-                <img src = "images/people/hari.jpg">
+                <img src = "images/people/jacob_image.jpg">
                 <div class="text">
                   DIRECTION <br />
                   CINEMATOGRAPHY
@@ -141,7 +157,7 @@
                 <div class="overlay">
                   <div class="handle"> @jeevdraws</div>
                 </div>
-                <img src = "images/people/jeev.jpg">
+                <img src = "images/people/jeev_image.jpg">
                 <div class="text">
                   DIRECTION <br />
                   DESIGN
@@ -152,14 +168,84 @@
           </div>
           
       </div>
-
+    
         <!-- Footer -->
       <footer class="text-center">
           <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-          <hr>
-          <span class="glyphicon glyphicon-chevron-up"></span>
+          <img src="icons/above_links_line.png" class="above_links_line">
           </a><br><br>
-          <p>Social Media Plugs</p> 
+          <div class="social-media-icons">
+            <div class="buttons">
+              <button class="socialmediaButton youtube-static" title="Youtube link" 
+                onmouseover="hoverDisplay('youtube')" onmouseout="staticDisplay('youtube')">
+                <a href="https://www.youtube.com/channel/UCUFrYvmjh2lGV9JkSX0UZQQ" target="_blank">
+                <img src="icons/youtube_blue_icon.png" alt="youtube"></a>
+                <div class="sm-text">Youtube</div>
+              </button>
+              <button class="socialmediaButton youtube-onhover" title="Youtube link">
+                <a href="https://www.youtube.com/channel/UCUFrYvmjh2lGV9JkSX0UZQQ" target="_blank">
+                <img src="icons/youtube_colour_icon.svg" alt="youtube"></a>
+                <div class="sm-text-onhover">Youtube</div>
+              </button> 
+
+              <button class="socialmediaButton insta-static" title="Instagram link" 
+              onmouseover="hoverDisplay('insta')" onmouseout="staticDisplay('insta')">
+              <a href="https://www.instagram.com/tenthousandpixels/" target="_blank">
+                <img src="icons/insta_blue_icon.png" alt="insta"></a>
+                <div class="sm-text">Instagram</div>
+              </button>
+
+              <button class="socialmediaButton insta-onhover" title="Instagram link">
+                <a href="https://www.instagram.com/tenthousandpixels/" target="_blank">
+                <img src="icons/insta_colour_icon.svg" alt="insta"></a>
+                <div class="sm-text-onhover">Instagram</div>
+              </button>
+
+              <button class="socialmediaButton fb-static" title="Facebook link" 
+              onmouseover="hoverDisplay('fb')" onmouseout="staticDisplay('fb')">
+              <a href="https://www.facebook.com/tenthousandpixels/" target="_blank">
+                <img src="icons/fb_blue_icon.png" alt="fb"></a>
+                <div class="sm-text">Facebook</div>
+              </button>
+
+              <button class="socialmediaButton fb-onhover" title="Facebook link">
+                <a href="https://www.facebook.com/tenthousandpixels/" target="_blank">
+                <img src="icons/fb_colour_icon.svg" alt="fb"></a>
+                <div class="sm-text-onhover">Facebook</div>
+              </button>
+
+              <button class="socialmediaButton twitter-static" title="Twitter link" 
+              onmouseover="hoverDisplay('twitter')" onmouseout="staticDisplay('twitter')">
+              <a href="https://twitter.com/tenthousandpxls" target="_blank">
+                <img src="icons/twitter_blue_icon.png" alt="twitter"></a>
+                <div class="sm-text">Twitter</div>
+              </button>
+
+              <button class="socialmediaButton twitter-onhover" title="Twitter link">
+                <a href="https://twitter.com/tenthousandpxls" target="_blank">
+                <img src="icons/twitter_colour_icon.svg" alt="twitter"></a>
+                <div class="sm-text-onhover">Twitter</div>
+              </button>
+
+              <button class="socialmediaButton vimeo-static" title="Vimeo link" 
+              onmouseover="hoverDisplay('vimeo')" onmouseout="staticDisplay('vimeo')">
+              <a href="https://vimeo.com/10kpx/" target="_blank">
+                <img src="icons/vimeo_blue_icon.png" alt="vimeo"></a>                
+                <div class="sm-text">Vimeo</div>
+              </button>
+
+              <button class="socialmediaButton vimeo-onhover" title="Vimeo link">
+                <a href="https://vimeo.com/10kpx" target="_blank">
+                <img src="icons/vimeo_colour_icon.svg" alt="vimeo"></a>                
+                <div class="sm-text-onhover">Vimeo</div>
+              </button>
+            </div>
+            
+
+          </div> 
+          <div class="tenkpx-dots">
+            <img src="icons/tenkpx_dots.png">
+          </div>
       </footer>        
 
     </body>

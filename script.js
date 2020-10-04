@@ -2,6 +2,47 @@ function openInsta($handle){
   window.open("https://www.instagram.com/" + $handle, "_blank");
 }
 
+
+$(document).ready(function(){
+  
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll > 100) {
+      $(".navbar").css("background" , "#E8E8E8");   
+	  }
+
+	  else{
+      $(".navbar").css("background" , "linear-gradient(180deg, #E8E8E8 0%, rgba(255,255,255,0) 100%)"); 
+    }
+  })
+});
+
+//watch now hover
+function Start() {
+
+  $('.watch-now-container').on({
+  
+  mouseenter: function () { $('.spray').prop('src', 'images/spray-paint-animation.gif') },
+  
+    });
+  }
+  
+  $(Start);
+//footer icons
+function staticDisplay($id)
+{
+  $('.'+$id+'-static').show();
+  $('.'+$id+'-onhover').hide();
+}
+
+function hoverDisplay($id)
+{
+  $('.'+$id+'-static').hide();
+  $('.'+$id+'-onhover').show();
+  
+}
+
+
 //Start Youtube API
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";

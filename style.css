@@ -1,22 +1,46 @@
+@font-face{
+  font-family: 'Primetime';
+  src: url('fonts/PRIMETIME.TTF');
+}
+
+@font-face{
+  font-family: 'Gotham';
+  src: url('fonts/GOTHAMBOLD.TTF');
+}
+
+@font-face{
+  font-family: 'Freehand-Bold';
+  src: url('fonts/FREEHAND\ BLOCKLETTER\ BOLD.TTF');
+}
+
+@font-face{
+  font-family: 'Freehand';
+  src: url('fonts/FREEHAND\ BLOCKLETTER.TTF');
+}
+
 html{
   scroll-behavior: smooth;
+
 }
 body {
-  font: 400 15px/1.8 Montserrat;
-  color: #E8E8E8;
-  /* background-color: #09162A; */
-  background: linear-gradient(0deg, #09162A 0%, #0C0C0C 100%);
+  font: 400 15px/1.8 'Gotham';
+  color: #E8E8E8; 
+  background-image: url("images/blue_bg.png");   
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar {
-  font-family: Montserrat, sans-serif;
+  font-family: 'Primetime', Monserrat;
   margin-bottom: 0;
-  background: linear-gradient(180deg, #E8E8E8 0%, rgba(255,255,255,0) 100%);
   border: 0;
   font-size: 11px !important;
   letter-spacing: 4px;
   opacity: 0.9;
 }
+
+
 .navbar li a, .navbar .navbar-brand { 
   color: #0C0C0C !important;
 }
@@ -45,32 +69,119 @@ body {
   padding: 30px;
   background-color: #09162A;
 }
-.bgimg-1{
+.bluebg{
+  background: linear-gradient(180deg, rgba(9,22,42,0) 30%, rgba(9,22,42,1) 100%);
   position: relative;
-  opacity: 0.65;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100%;
-  background-image: url("images/FreeFlying.jpg");
+  height: 100%;
+  width: 100%;  
+  padding: 0;
+  margin:0;
+}
+.free-flying{
+  padding-top: 15vh;
 }
 
 
+.watch-now{
+  width: 30%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto
+}
+
+.spray-animation{
+  width: 0%;
+  opacity: 0.5;
+  left: 0;
+  right: 0;
+  margin: auto
+}
+
+.watch-now-container:hover .spray-animation{
+  cursor: pointer;
+  width: 40%;
+}
+
+.bgimg-1 img{
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bgimg-1{
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: url("images/banner.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+}
+@media screen and (min-width: 700px) {
+  .bgimg-1{
+    background-image: url("images/banner.png");
+  }
+}
+@media screen and (max-width: 700px) and (min-width: 400px){
+  .bgimg-1{
+    background-image: url("images/main_banner_image.png");
+  }
+  .bgimg-1 img{
+    width: 50%;
+  }
+  .watch-now{
+    width: 40%;
+  }
+  .watch-now-container:hover .spray-animation{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .bgimg-1{
+    background-image: url("images/main_banner_image.png");
+  }
+  .bgimg-1 img{
+    width: 70%;
+  }
+  .watch-now{
+    width: 60%;
+  }
+  .watch-now-container:hover .spray-animation{
+    width: 70%;
+  }
+}
+
+
+#about{
+  background: linear-gradient(0deg, rgba(9,22,42,0.1) 0%, #09162A 100%);
+}
+
+.accolades{
+  padding-bottom: 100px;
+}
+.accolades img{
+  width: 100%;
+}
 /*
  * Bootrap carousel plugin
  * --------------------------------------------------
  */
- .youtube-carousel{
-  border: 4px solid #09162A;
-}
 
+.col-sm-8{
+  padding: 100px 0;
+}
 .video-container { 
    position: relative; /* keeps the aspect ratio */ 
    padding-bottom: 56.25%; /* fine tunes the video positioning */ 
-   padding-top: 60px; overflow: hidden;
+   padding-top: 60px; 
+   overflow: hidden;
    margin-bottom: -1px;
    margin-right: -1px;   
+   border-radius: 10px;
 }
 
 .video-container iframe,
@@ -130,13 +241,17 @@ body {
   -moz-border-radius: 0 90px 90px 0;
   -webkit-border-radius: 0 90px 90px 0;
   background-color: #09162A;
-  display: inline-block;
+  display: block;
   position: relative;
   float:left;
   /*subpixel bug*/
   margin-left: -1px; 
 }
-
+@media screen and (max-width:684px){
+  .above_links_line{
+    width:50%;
+  }
+}
 .right-button {
   height:70px;
   width:35px;
@@ -148,7 +263,7 @@ body {
   -moz-border-radius: 90px 0 0 90px;
   -webkit-border-radius: 90px 0 0 90px;
   background-color: #09162A;
-  display: inline-block;
+  display: block;
   position: relative;
   float:right;
   /*subpixel bug*/
@@ -169,69 +284,28 @@ body {
   pointer-events:none;
 }
 
-/* @media screen and (min-width: 768px) {
-.right-button {
-  height:120px;
-  width:60px;
-  border-radius: 90px 0 0 90px;
-  -moz-border-radius: 90px 0 0 90px;
-  -webkit-border-radius: 90px 0 0 90px;
-  display: inline-block;
-  position: relative;
-  float:right;
-}
-
-.left-button {
-  height:120px;
-  width:60px;
-  border-radius: 0 90px 90px 0;
-  -moz-border-radius: 0 90px 90px 0;
-  -webkit-border-radius: 0 90px 90px 0;
-  display: inline-block;
-  position: relative;
-  float:left;
-}
-
-.carousel-control .glyphicon-chevron-left{
-  top:35%;
-  font-size: 35px;
-  left:5%;
-}
-
-.carousel-control .glyphicon-chevron-right{
-  top:35%;
-  font-size: 35px;
-  left:35%;
-}
-
-.carousel-caption {
-  font-size: 18px;
-  padding:15px 20px 15px;
-  }
-}
-@media screen and (min-width: 992px) {
- .carousel-caption {
-    font-size: 18px;
-    padding:15px 20px 15px;
-  }
-} */
-
-/* ---------------------End of youtube carousel------------------------- */
-
 
 #about, #crew{
   color: #E8E8E8;
   text-align:center;
-  padding:100px 80px;
+  padding:60px 80px;
+}
+#crew .name, #crew h1{
+  font-family: "Freehand-Bold";
+}
+
+#crew .name{
+  
+  font-size: 20px;
 }
 
 hr{
   width:20%;
   text-align:center;
-  height:2px;
-  border-width:0;
+  height:3px;
   color:#E8E8E8;
-  background-color:#E8E8E8
+  background-color:#E8E8E8;
+  border-radius: 7px;
 }
 
 
@@ -272,8 +346,7 @@ hr{
   height: 0;
   background-color: #09162A;  
   right: 0;
-  overflow: hidden;
-  
+  overflow: hidden; 
   
 }
 #bottom-right, .text, .handle, .overlay, #stripes{
@@ -359,19 +432,36 @@ footer {
   color: #0C0C0C;
   padding: 32px;
 }
-footer a {
-  color: #f5f5f5;
+.buttons{
+  margin: 0 auto;
+  display: table;
+  
 }
-footer a:hover {
-  color: #777;
-  text-decoration: none;
-}  
 
-footer hr{
-  width:20%;
-  text-align:center;
-  height:2px;
-  border-width:0;
-  color:#0C0C0C;
-  background-color:#0C0C0C
+.socialmediaButton{
+  background-color: transparent;
+  border: none;
+  vertical-align: middle;
+  padding: 0 30px;
+}
+
+.socialmediaButton img{
+  height: 40px;
+}
+
+.insta-onhover, 
+.fb-onhover,
+.twitter-onhover,
+.vimeo-onhover,
+.youtube-onhover{
+  display: none;
+}
+.sm-text{
+  visibility: hidden;
+}
+
+.tenkpx-dots{
+  width: 70%;
+  padding: 20px;
+  margin: 0 auto;
 }
